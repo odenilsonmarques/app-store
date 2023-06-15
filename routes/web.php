@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Category\ControllerCategory;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/categories',[ControllerCategory::class,'create'])->name('categories.create');
 
 Route::get('/', function () {
     return view('welcome');
