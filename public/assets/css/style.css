@@ -1,0 +1,48 @@
+body{
+    background-color: #FFFAF0;
+}
+
+.navbar a.navbar-brand {
+    color: #FEFBF6;
+    font-weight: bold;   
+    font-size: 20px;
+}
+
+.navbar-expand-sm .navbar-nav .nav-link{
+    color: #FEFBF6;
+}
+
+.navbar-expand-sm .navbar-nav .nav-link:hover{
+    text-decoration: underline;
+}
+
+
+button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.card-header{
+    background-color: #AEC2B6;
+}
+
+.suppliers{
+    margin-top:80px;
+}
+.header-table{
+    background-color: #AEC2B6 ;
+}
+
+table th{
+    color:#fff;
+    
+}
+
+table td a{
+    color:#94AF9F;
+    padding-left: 8px;
+}
+
+table td a:hover{
+    color:#111;
+}
