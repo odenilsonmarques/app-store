@@ -25,7 +25,8 @@ class ControllerCategory extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $categories = Category::create($request->all());
+        dd($categories);
     }
 
     /**

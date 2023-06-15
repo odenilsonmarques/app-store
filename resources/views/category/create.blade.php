@@ -1,1 +1,3 @@
-<h1>welcome</h1>
+@extends('layouts.template')
+
+@section('title','categoria')
