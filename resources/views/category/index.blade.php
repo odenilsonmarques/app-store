@@ -12,9 +12,11 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
+
+            <button type="button" class="btn btn-outline-secondary mb-3"><a href="{{route('categories.create')}}">Adicionar</a></button>
             <div class="table-responsive">
                 <table class="table table table-hover caption-top">
-                    <caption class="categories">Categorias</caption>
+                    {{-- <caption class="categories">Categorias</caption> --}}
                     <thead class="table header-table">
                         <tr>
                             <th>Categoria</th>
