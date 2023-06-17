@@ -15,9 +15,9 @@ use App\Http\Controllers\Category\ControllerCategory;
 |
 */
 
-Route::get('/categories',[ControllerCategory::class,'create'])->name('categories.create');
-
-Route::post('/categories',[ControllerCategory::class,'store'])->name('categories.store');
+Route::get('/categories/create',[ControllerCategory::class,'create'])->name('categories.create');
+Route::post('/categories/store',[ControllerCategory::class,'store'])->name('categories.store');
+Route::get('/categories/index',[ControllerCategory::class,'index'])->name('categories.index');
 
 Route::get('/', function () {
     return view('welcome');
