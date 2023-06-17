@@ -4,15 +4,16 @@ namespace App\Http\Controllers\Category;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Http\Requests\UpdateStoreCategory;
+
 
 class ControllerCategory extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $categories = Category::all();
+        return view('category.index',compact('categories'));
     }
 
     public function create()
@@ -20,34 +21,28 @@ class ControllerCategory extends Controller
         return view('category.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+   
+    public function store(updateStoreCategory $request)
     {
         $categories = Category::create($request->all());
-        dd($categories);
+        // dd($categories);
+        return redirect()->route('categories.index')
+        ->with('messageCreate', 'Categoria cadastrada com sucesso !');
     }
 
-    /**
-     * Display the specified resource.
-     */
+    
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+   
     public function update(Request $request, string $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    
     public function destroy(string $id)
     {
         //
