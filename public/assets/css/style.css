@@ -22,6 +22,10 @@ button a{
     color: #fff;
 }
 
+.btn-outline-secondary a{
+    color: #111;
+}
+
 .card-header{
     background-color: #AEC2B6;
 }
