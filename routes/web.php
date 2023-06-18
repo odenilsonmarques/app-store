@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Category\ControllerCategory;
+use App\Http\Controllers\Product\ControllerProduct;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,11 @@ use App\Http\Controllers\Category\ControllerCategory;
 Route::get('/categories/create',[ControllerCategory::class,'create'])->name('categories.create');
 Route::post('/categories/store',[ControllerCategory::class,'store'])->name('categories.store');
 Route::get('/categories/index',[ControllerCategory::class,'index'])->name('categories.index');
+
+
+
+Route::get('/products/create',[ControllerProduct::class,'create'])->name('products.create');
+Route::post('/products/store',[ControllerProduct::class,'store'])->name('products.store');
 
 Route::get('/', function () {
     return view('welcome');
