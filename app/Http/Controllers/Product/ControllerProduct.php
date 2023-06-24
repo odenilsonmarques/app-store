@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
+use App\Http\Requests\UpdateStoreProduct;
 
 class ControllerProduct extends Controller
 {
@@ -27,18 +28,20 @@ class ControllerProduct extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(UpdateStoreProduct $request)
     {
-        $request->merge(['category_id']); 
-    
+        $data = $request->merge(['category_id']); 
+        $data = $request->except('photo');
+        
         if($request->photo)
         {
-            $produtcs['photo'] = $request->photo->store('/img-product');
+            $data['photo'] = $request->photo->store('img-product');
         }
-        
-        $produtcs = Product::create($request->all());
 
-        dd($produtcs);
+        // dd($data);
+        Product::create($data);
+
+        
     }
 
     /**
