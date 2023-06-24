@@ -1,17 +1,17 @@
+function formatCoin(inputId) {
+  var elemento = document.getElementById(inputId);
+  var value = elemento.value;
 
-function formatCoin() {
-    var elemento = document.getElementById('amount');
-    var amount = elemento.value;
-    
-    amount = amount + '';
-    amount = parseInt(amount.replace(/[\D]+/g,''));
-    amount = amount + '';
-    amount = amount.replace(/([0-9]{2})$/g, ",$1");
-  
-    if (amount.length > 6) {
-      amount = amount.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
-    }
-    elemento.value = amount;
+  value = value + '';
+  value = parseInt(value.replace(/[\D]+/g, ''));
+  value = value + '';
+  value = value.replace(/([0-9]{2})$/g, ",$1");
 
-    if(amount == 'NaN') elemento.value = '';
+  if (value.length > 6) {
+    value = value.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+  }
+
+  elemento.value = value;
+
+  if (value == 'NaN') elemento.value = '';
 }

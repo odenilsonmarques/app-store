@@ -59,24 +59,24 @@
                         <div class="row">
                             <div class="col-lg-4 mb-3">
                                 <label for="cost_price" class="form-label">Preço de custo</label>
-                                <input type="text"  name="cost_price"  id="cost_price" class="form-control" value="{{old('cost_price')}}" required>
+                                <input type="text"  name="cost_price"  id="cost_price" class="form-control" value="{{old('cost_price')}}"  oninput="formatCoin('cost_price')" required>
                             </div>
 
                             <div class="col-lg-4 mb-3">
                                 <label for="sale_price" class="form-label">Preço de venda</label>
-                                <input type="text"  name="sale_price"  id="sale_price" class="form-control" value="{{old('cost_price')}}" required>
+                                <input type="text"  name="sale_price"  id="sale_price" class="form-control" value="{{old('sale_price')}}" oninput="formatCoin('sale_price')" required>
                             </div>
 
                             <div class="col-lg-4 mb-3">
                                 <label for="photo" class="form-label">Foto</label>
-                                <input type="file"  name="photo"  id="photo" class="form-control" value="{{old('cost_price')}}" required>
+                                <input type="file"  name="photo"  id="photo" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-lg-12 mb-3">
                                 <label for="description" class="form-label">Descrição</label>
-                                <textarea name="description" id="description" cols="" rows="2" class="form-control" required>{{old('description')}}</textarea>
+                                <textarea name="description" id="description" cols="" rows="2" class="form-control" required >{{old('description')}}</textarea>
                             </div>
                         </div>
 
