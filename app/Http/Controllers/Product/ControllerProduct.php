@@ -15,7 +15,8 @@ class ControllerProduct extends Controller
      */
     public function index()
     {
-        
+        $products = Product::all();
+        return view('product.index',compact('products'));
     }
 
     public function create()
@@ -37,7 +38,6 @@ class ControllerProduct extends Controller
         {
             $data['photo'] = $request->photo->store('img-product');
         }
-
         // dd($data);
         Product::create($data);
 
