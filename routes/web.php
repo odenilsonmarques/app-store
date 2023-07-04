@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Category\ControllerCategory;
 use App\Http\Controllers\Product\ControllerProduct;
+use App\Http\Controllers\Home\ControllerHome;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,12 +21,16 @@ Route::get('/categories/create',[ControllerCategory::class,'create'])->name('cat
 Route::post('/categories/store',[ControllerCategory::class,'store'])->name('categories.store');
 Route::get('/categories/index',[ControllerCategory::class,'index'])->name('categories.index');
 
-
-
 Route::get('/products/create',[ControllerProduct::class,'create'])->name('products.create');
 Route::post('/products/store',[ControllerProduct::class,'store'])->name('products.store');
-Route::get('products/index',[ControllerProduct::class,'index'])->name('products.index');;
+Route::get('products/index',[ControllerProduct::class,'index'])->name('products.index');
+
+//route to direct user to loged in sistema
+Route::get('/home',[ControllerHome::class,'index'])->name('home.index');
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+require __DIR__.'/auth.php';
