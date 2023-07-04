@@ -24,10 +24,10 @@
                             <a class="nav-link" href="#">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Categoria</a>
+                            <a class="nav-link" href="{{route('categories.index')}}">Categoria</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Produto</a>
+                            <a class="nav-link" href="{{route('products.index')}}">Produto</a>
                         </li>
                     </ul>
                 </nav>
