@@ -40,6 +40,9 @@ class ControllerProduct extends Controller
         }
         // dd($data);
         Product::create($data);
+        return redirect()->route('products.index')
+        ->with('messageCreate', 'Produto cadastrado com sucesso !');
+
 
         
     }

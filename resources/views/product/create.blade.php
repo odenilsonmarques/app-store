@@ -23,14 +23,14 @@
                         <div class="row">
                             <div class="col-lg-12 mb-3">
                                 <label for="name" class="form-label">Produto</label>
-                                <input type="text"  name="name" id="name" class="form-control" value="{{old('name')}}" required>
+                                <input type="text"  name="name" id="name" class="form-control" value="{{old('name')}}" >
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-lg-12 mb-3">
                                 <label for="name" class="form-label">Categoria</label>
-                                <select name="category_id" class="form-select" required>
+                                <select name="category_id" class="form-select" >
                                     <option value="">Selecione</option>
                                     @foreach($categories as $category)
                                         <option value="{{$category['id']}}" {{ old('category_id') == $category['id'] ? 'selected' : '' }}>{{$category['name']}}</option>
@@ -42,41 +42,41 @@
                         <div class="row">
                             <div class="col-lg-4 mb-3">
                                 <label for="quantity" class="form-label">Quantidade</label>
-                                <input type="number"  name="quantity" id="quantity" class="form-control" value="{{old('quantity')}}" required>
+                                <input type="number"  name="quantity" id="quantity" class="form-control" value="{{old('quantity')}}" >
                             </div>
 
                             <div class="col-lg-4 mb-3">
                                 <label for="confirm_quantity" class="form-label">Confirme a quantidade</label>
-                                <input type="number"  name="confirm_quantity"  id="confirm_quantity" class="form-control"  value="{{old('confirm_quantity')}}" required>
+                                <input type="number"  name="confirm_quantity"  id="confirm_quantity" class="form-control"  value="{{old('confirm_quantity')}}" >
                             </div>
 
                             <div class="col-lg-4 mb-3">
                                 <label for="minimum_quantity" class="form-label">Quantidade minima</label>
-                                <input type="number"  name="minimum_quantity"  id="minimum_quantity" class="form-control" value="{{old('minimum_quantity')}}" required>
+                                <input type="number"  name="minimum_quantity"  id="minimum_quantity" class="form-control" value="{{old('minimum_quantity')}}" >
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-lg-4 mb-3">
                                 <label for="cost_price" class="form-label">Preço de custo</label>
-                                <input type="text"  name="cost_price"  id="cost_price" class="form-control" value="{{old('cost_price')}}"  oninput="formatCoin('cost_price')" required>
+                                <input type="text"  name="cost_price"  id="cost_price" class="form-control" value="{{old('cost_price')}}"  oninput="formatCoin('cost_price')" >
                             </div>
 
                             <div class="col-lg-4 mb-3">
                                 <label for="sale_price" class="form-label">Preço de venda</label>
-                                <input type="text"  name="sale_price"  id="sale_price" class="form-control" value="{{old('sale_price')}}" oninput="formatCoin('sale_price')" required>
+                                <input type="text"  name="sale_price"  id="sale_price" class="form-control" value="{{old('sale_price')}}" oninput="formatCoin('sale_price')" >
                             </div>
 
                             <div class="col-lg-4 mb-3">
                                 <label for="photo" class="form-label">Foto</label>
-                                <input type="file"  name="photo"  id="photo" class="form-control" required>
+                                <input type="file"  name="photo"  id="photo" class="form-control" >
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-lg-12 mb-3">
                                 <label for="description" class="form-label">Descrição</label>
-                                <textarea name="description" id="description" cols="" rows="2" class="form-control" required >{{old('description')}}</textarea>
+                                <textarea name="description" id="description" cols="" rows="2" class="form-control"  >{{old('description')}}</textarea>
                             </div>
                         </div>
 

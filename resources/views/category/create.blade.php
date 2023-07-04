@@ -23,13 +23,13 @@
                         <div class="row">
                             <div class="col-lg-12 mb-3">
                                 <label for="name" class="form-label">Nome da categoria</label>
-                                <input type="text" name="name" id="name" class="form-control" value="{{old('name')}}">
+                                <input type="text" name="name" id="name" class="form-control" value="{{old('name')}}" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12 mb-3">
                                 <label for="description" class="form-label">Descrição</label>
-                                <textarea name="description" id="description" cols="" rows="2" class="form-control">{{old('description')}}</textarea>
+                                <textarea name="description" id="description" cols="" rows="2" class="form-control" required>{{old('description')}}</textarea>
                             </div>
                         </div>
                         <div class="row">

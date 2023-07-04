@@ -12,11 +12,15 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
-
-            <button type="button" class="btn btn-outline-secondary mb-3"><a href="{{route('products.create')}}">Adicionar</a></button>
             <div class="table-responsive">
                 <table class="table table table-hover caption-top">
-                    {{-- <caption class="categories">Categorias</caption> --}}
+                    <caption class="categories">Produtos<br>
+                        <button type="button" class="btn btn-secondary btn-sm mt-3"><a href="{{route('products.create')}}">Novo
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                            </svg></a>
+                        </button>
+                    </caption>
                     <thead class="table header-table">
                         <tr>
                             <th>Produto</th>
@@ -41,7 +45,7 @@
                                 <td>{{date('d/m/Y',strtotime($product->created_at))}}</td>
                                 <td>
                                     @if($product->photo)
-                                        <img src="{{url("storage/{$product->photo}") }}" alt="{{$product->name}}" width="50" height="50" class=" rounded-circle">
+                                        <img src="{{url("storage/{$product->photo}") }}" alt="{{$product->name}}" width="50" height="50" class="rounded-circle">
                                     @else
                                         <img src="{{url("assets/img/no-image.png") }}" alt="foto" width="50" height="50">
                                     @endif

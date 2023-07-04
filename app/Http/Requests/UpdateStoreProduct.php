@@ -31,16 +31,16 @@ class UpdateStoreProduct extends FormRequest
             'cost_price'=>['required','string'],
             'sale_price'=>['required','string'],
 
-            'description' => ['required','string','max:255'],
+            'description' => ['required','string','min:10','max:50'],
 
-            'photo'=>['image','max:1024'],
+            'photo'=>['required','image','max:1024'],
         ];
     }
 
     public function messages()
     {
         return  [
-            'name.required' => 'O campo  produto é obrgatório',
+            'name.required' => 'O campo  produto é obrigatório',
             'name.min' => 'O campo produto deve ter no  mínimo 5 caracteres',
             'name.max' => 'O campo produto deve ter no  máximo 30 caracteres',
             'name.unique' => 'Já existe um produto com o nome informado',
@@ -64,6 +64,11 @@ class UpdateStoreProduct extends FormRequest
 
             'cost_price.required'=>'O campo preço de custo é obrigatório',
             'sale_price.required'=>'O campo preço de venda é obrigatório',
+
+            'description.required' => 'O campo descrição é obrigatório',
+            'description.min' => 'O campo descrição deve ter no  mínimo 10 caracteres',
+            'description.max' => 'O campo descrição deve ter no  máximo 50 caracteres',
+            
 
             'photo.required'=>'O campo foto é obrigatório',
             'photo.image'=>'O campo foto deve uma imagem e ter no máximo :1024 kb',

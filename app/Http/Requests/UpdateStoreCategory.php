@@ -23,7 +23,7 @@ class UpdateStoreCategory extends FormRequest
     {
         return [
             'name'=>['required','string','min:3','max:255','unique:categories'],
-            'description' => ['required','string','max:255'],
+            'description' => ['required','string','min:10','max:255'],
         ];
     }
 
@@ -31,12 +31,13 @@ class UpdateStoreCategory extends FormRequest
     {
         return [
             'name.required'=>'O campo nome categoria é obrigatório',
-            'name.min'=>'O campo nome categoria deve ter no mínimo 3 caractres',
-            'name.max'=>'O campo nome categoria deve ter no maximo 255 caractres',
+            'name.min'=>'O campo nome categoria deve ter no mínimo 3 caracteres',
+            'name.max'=>'O campo nome categoria deve ter no maximo 255 caracteres',
+            'name.unique'=>'Já existe uma categoria com esse nome, por favor informe outro',
 
             'description.required'=>'O campo descrição é obrigatório',
-            'descriptio.max'=>'O campo descrição deve ter no maximo 255 caractres',
-
+            'description.max'=>'O campo descrição deve ter no maximo 255 caracteres',
+            'description.min'=>'O campo descrição deve ter no mínimo 10 caracteres',
         ];
     }
 }
