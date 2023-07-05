@@ -26,6 +26,7 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
+
      /*
      utilizando o recurso mutators para especificar os padrões que desejo inserir na banco de dados
      utilizei o nome das variaveis igual do campo, mas poderia ser outro nome
