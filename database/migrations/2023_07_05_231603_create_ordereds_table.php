@@ -17,6 +17,7 @@ return new class extends Migration
             $table->date('ordered_date');
             $table->string('status');
             $table->double('ordered_value',10,2)->default(0);
+            $table->string('delivery_address');
             $table->string('description');
             $table->timestamps();
         });
