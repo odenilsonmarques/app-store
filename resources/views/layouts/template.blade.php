@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="mb">
-        <nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background-color:#94AF9F">
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background-color:#827397">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     Loja virtual
@@ -18,6 +18,12 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
+                <input type="text" name="person" id="person" class="form-control inputSearch" placeholder="Buscar produto">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-outline search">Buscar</button>
+                </div>
+
                 <nav class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">

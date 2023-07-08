@@ -6,6 +6,7 @@ use App\Http\Controllers\Category\ControllerCategory;
 use App\Http\Controllers\Product\ControllerProduct;
 use App\Http\Controllers\Home\ControllerHome;
 use App\Http\Controllers\Ordered\ControllerOrdered;
+use App\Http\Controllers\Site\ControllerSite;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ use App\Http\Controllers\Ordered\ControllerOrdered;
 
 //route to direct user to loged in sistema
 Route::get('/home',[ControllerHome::class,'index'])->name('home.index');
+Route::get('/',[ControllerSite::class,'index'])->name('home');
 
 Route::get('/categories/create',[ControllerCategory::class,'create'])->name('categories.create');
 Route::post('/categories/store',[ControllerCategory::class,'store'])->name('categories.store');
@@ -33,9 +35,9 @@ Route::get('ordereds/create',[ControllerOrdered::class,'create'])->name('ordered
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 require __DIR__.'/auth.php';

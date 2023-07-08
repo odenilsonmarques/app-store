@@ -2,14 +2,19 @@ body{
     background-color: #FFFAF0;
 }
 
+.navbar{
+    height: 90px;
+}
+
 .navbar a.navbar-brand {
-    color: #FEFBF6;
+    color: #E7CBCB;
     font-weight: bold;   
     font-size: 20px;
+   
 }
 
 .navbar-expand-sm .navbar-nav .nav-link{
-    color: #FEFBF6;
+    color: #E7CBCB;
 }
 
 .navbar-expand-sm .navbar-nav .nav-link:hover{
@@ -35,6 +40,20 @@ button a{
 }
 .header-table{
     background-color: #AEC2B6 ;
+}
+
+.search{
+    color: #E7CBCB;
+    border:1px solid #E7CBCB;
+    margin-left: 5px;
+}
+
+.card{
+    border:none;
+}
+
+.card img{
+    text-align: center;
 }
 
 table th{
