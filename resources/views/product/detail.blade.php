@@ -4,25 +4,33 @@
 @section('content')
     <div class="container">
         <div class="row mt-5">
-            @foreach ($products as $product)
-                <div class="col-sm-3 mt-5">
-                    <a href="{{route('products.show',[$product->uuid])}}" class="redirect">
+            
+                <div class="col-sm-12 mt-5">
+                   
                         <div class="card shadow">
-                            {{-- <img src="{{asset('https://teste-laravel9.s3.sa-east-1.amazonaws.com/' . $product->photo) }}"> --}}
-                            <div class="text-center">
-                                <img src="{{url("storage/{$product->photo}")}}" alt="{{$product->name}}" width="120" height="120" class="img-responsive mt-4" >
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="text-center">
+                                        <img src="{{url("storage/{$products->photo}")}}" alt="{{$products->name}}" width="300" height="300" class="zoom-image mt-5">
+                                    </div>
+                                </div>
+    
+                                <div class="col-sm-4 mt-5">
+                                    <div class="text-left">
+                                        <h1>{{$products->description}}</h1>
+                                        <h4>R$ {{$products->sale_price}}</h4>
+                                        @if($products->confirm_quantity > 0)
+                                            <p id="available">Disponível</p>
+                                        @else
+                                            <p id="not-available">Não disponível</p>
+                                        @endif
+                                    </div>
+                                </div>
                             </div>
                             
-                            <div class="card-body">
-                                <h5 class="card-title">R$ {{$product->sale_price}}</h5>
-                                <p class="card-text">{{$product->description}}</p>
-                                
-                                @if($product->confirm_quantity > 0)
-                                    <p id="available">Disponível</p>
-                                @else
-                                    <p id="not-available">Não disponível</p>
-                                @endif
-                            </div>
+
+                            
+                            
                             <div class="card-footer text-muted text-center">
                                 <a href="#" class="btn btn-primary">
                                     Eu quero
@@ -32,9 +40,9 @@
                                 </a>
                             </div>
                         </div>
-                    </a>
+                    
                 </div>
-            @endforeach
+           
         </div>
     </div>
 @endsection

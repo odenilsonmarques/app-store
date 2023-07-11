@@ -12,7 +12,7 @@
     <header class="mb">
         <nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background-color:#827397">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{route('home')}}">
                     Loja virtual
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">

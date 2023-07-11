@@ -52,9 +52,7 @@ button a{
     border:none;
 }
 
-.card img{
-    text-align: center;
-}
+
 
 table th{
     color:#fff;
@@ -69,3 +67,35 @@ table td a{
 table td a:hover{
     color:#111;
 }
+
+#available{
+    color:#29b15f
+}
+#not-available{
+    color:rgb(238, 64, 64)
+}
+.card h1{
+    color:#111;
+    font-size: 30px;
+}
+
+.card h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* setting size and zoom on product photo */
+.zoom-image {
+    width: 200px; /* Tamanho inicial da imagem */
+    height: 200px;
+    transition: transform 0.3s; /* Adiciona uma transição suave ao efeito de zoom */
+  }
+  
+  .zoom-image:hover {
+    transform: scale(1.2); /* Aplica o efeito de zoom na imagem quando o mouse estiver sobre ela */
+  }
+  
+  a.redirect{
+    text-decoration: none;
+    color: #000000;
+  }

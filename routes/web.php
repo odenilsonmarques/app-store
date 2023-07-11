@@ -30,6 +30,7 @@ Route::get('/categories/index',[ControllerCategory::class,'index'])->name('categ
 Route::get('/products/create',[ControllerProduct::class,'create'])->name('products.create');
 Route::post('/products/store',[ControllerProduct::class,'store'])->name('products.store');
 Route::get('products/index',[ControllerProduct::class,'index'])->name('products.index');
+Route::get('products/{uuid}/detail',[ControllerProduct::class,'show'])->name('products.show');
 
 Route::get('ordereds/create',[ControllerOrdered::class,'create'])->name('ordereds.create');
 

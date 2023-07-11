@@ -48,11 +48,22 @@ class ControllerProduct extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * usando o parametro $identify para pegar um produto por vez, poderia ser o ID
      */
-    public function show(string $id)
+    public function show($uuid)
     {
-        //
+        if(!$products = Product::where('uuid', $uuid)->first())
+            return redirect()->route('home');
+
+        return view('product.detail',compact('products'));
+
+
+        // $products = Product::find($identify);
+        // if($pro){
+        //     return view('denunciationIdentification.details',['data' => $data]);
+        // }else{
+        //     return redirect()->back();
+        // }
     }
 
     /**
