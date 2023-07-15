@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="container">
-        <div class="row mt-5">
+        <div class="row display-product">
             @foreach ($products as $product)
                 <div class="col-sm-3 mt-5">
                     <a href="{{route('products.show',[$product->uuid])}}" class="redirect">

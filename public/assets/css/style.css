@@ -1,5 +1,5 @@
 body{
-    background-color: #FFFAF0;
+    background-color: #FFF;
 }
 
 .navbar{
@@ -99,3 +99,42 @@ table td a:hover{
     text-decoration: none;
     color: #000000;
   }
+
+.card h5{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+} 
+
+.container-fluid{
+    /* border: 1px solid red; */
+    margin-top: 90px;
+    height: 50px;
+    
+
+}
+
+.supplements h1{
+    margin-top: 10px;
+    font-size:17px;
+    color:#363062;
+    /* border: 1px solid red; */
+}
+
+.supplements img{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  
+}
+.container-fluid.supplements{
+    background-color: #E7CBCB;
+   
+}
+
+.display-product{
+    margin-top:150px;
+}
+
+.detail-product{
+    margin-top:120px;
+}

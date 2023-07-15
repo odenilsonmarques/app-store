@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="container">
-        <div class="row mt-5">
+        <div class="row detail-product">
             
                 <div class="col-sm-12 mt-5">
                    
@@ -13,20 +13,32 @@
                                     <div class="text-center">
                                         <img src="{{url("storage/{$products->photo}")}}" alt="{{$products->name}}" width="300" height="300" class="zoom-image mt-5">
                                     </div>
+                                    
                                 </div>
     
                                 <div class="col-sm-4 mt-5">
                                     <div class="text-left">
-                                        <h1>{{$products->description}}</h1>
+                                        <h1>{{$products->name}}</h1>
                                         <h4>R$ {{$products->sale_price}}</h4>
+                                        <h5><strong>Categoria:</strong> {{$products->category->name}}</h5>
                                         @if($products->confirm_quantity > 0)
                                             <p id="available">Disponível</p>
                                         @else
                                             <p id="not-available">Não disponível</p>
                                         @endif
                                     </div>
+                                    <h5><strong>Características:</strong>{{$products->feature}}</h5><hr>
+                                    <h5><strong>Descrição:</strong>{{$products->description}}</h5>
                                 </div>
+                               
                             </div>
+
+                           
+                                
+                                    
+                               
+                                
+                          
                             
 
                             

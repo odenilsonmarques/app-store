@@ -23,6 +23,7 @@ return new class extends Migration
             $table->double('sale_price', 10,2)->default(0);
             $table->string('photo');
             $table->string('description');
+            $table->string('feature');
             $table->timestamps();
         });
     }

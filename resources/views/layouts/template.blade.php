@@ -13,7 +13,7 @@
         <nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background-color:#827397">
             <div class="container">
                 <a class="navbar-brand" href="{{route('home')}}">
-                    Loja virtual
+                    Run
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -46,7 +46,24 @@
             </div>
         </nav>
     </header>
-
+    <section>
+        <div class="container-fluid fixed-top supplements">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <h1><img src="{{asset('assets/img/academia1.png')}}">Creatina</h1>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <h1><img src="{{asset('assets/img/mulher.png')}}">Whey protein</h1>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <h1><img src="{{asset('assets/img/exercicio.png')}}">Hipercalórico</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section>
         @yield('content')
     </section>

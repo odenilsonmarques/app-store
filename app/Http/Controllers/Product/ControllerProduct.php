@@ -33,6 +33,8 @@ class ControllerProduct extends Controller
     {
         $data = $request->merge(['category_id']); 
         $data = $request->except('photo');
+
+        
         
         if($request->photo)
         {
