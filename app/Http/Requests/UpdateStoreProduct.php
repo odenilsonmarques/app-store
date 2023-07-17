@@ -31,8 +31,8 @@ class UpdateStoreProduct extends FormRequest
             'cost_price'=>['required','string'],
             'sale_price'=>['required','string'],
 
-            'description' => ['required','string','min:10','max:50'],
-
+            'description' => ['required','string','min:15','max:500'],
+            'feature' => ['required','string','min:15','max:500'],
             'photo'=>['required','image','max:1024'],
         ];
     }
@@ -67,7 +67,11 @@ class UpdateStoreProduct extends FormRequest
 
             'description.required' => 'O campo descrição é obrigatório',
             'description.min' => 'O campo descrição deve ter no  mínimo 10 caracteres',
-            'description.max' => 'O campo descrição deve ter no  máximo 50 caracteres',
+            'description.max' => 'O campo descrição deve ter no  máximo 500 caracteres',
+
+            'feature.required' => 'O campo características é obrigatório',
+            'feature.min' => 'O campo características deve ter no  mínimo 10 caracteres',
+            'feature.max' => 'O campo características deve ter no  máximo 500 caracteres',
             
 
             'photo.required'=>'O campo foto é obrigatório',

@@ -6,6 +6,7 @@ use App\Http\Controllers\Category\ControllerCategory;
 use App\Http\Controllers\Product\ControllerProduct;
 use App\Http\Controllers\Home\ControllerHome;
 use App\Http\Controllers\Ordered\ControllerOrdered;
+use App\Http\Controllers\Site\ControllerSite;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ use App\Http\Controllers\Ordered\ControllerOrdered;
 
 //route to direct user to loged in sistema
 Route::get('/home',[ControllerHome::class,'index'])->name('home.index');
+Route::get('/',[ControllerSite::class,'index'])->name('home');
 
 Route::get('/categories/create',[ControllerCategory::class,'create'])->name('categories.create');
 Route::post('/categories/store',[ControllerCategory::class,'store'])->name('categories.store');
@@ -28,14 +30,15 @@ Route::get('/categories/index',[ControllerCategory::class,'index'])->name('categ
 Route::get('/products/create',[ControllerProduct::class,'create'])->name('products.create');
 Route::post('/products/store',[ControllerProduct::class,'store'])->name('products.store');
 Route::get('products/index',[ControllerProduct::class,'index'])->name('products.index');
+Route::get('products/{uuid}/detail',[ControllerProduct::class,'show'])->name('products.show');
 
 Route::get('ordereds/create',[ControllerOrdered::class,'create'])->name('ordereds.create');
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 require __DIR__.'/auth.php';

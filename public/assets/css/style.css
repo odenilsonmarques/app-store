@@ -1,15 +1,20 @@
 body{
-    background-color: #FFFAF0;
+    background-color: #FFF;
+}
+
+.navbar{
+    height: 90px;
 }
 
 .navbar a.navbar-brand {
-    color: #FEFBF6;
+    color: #E7CBCB;
     font-weight: bold;   
     font-size: 20px;
+   
 }
 
 .navbar-expand-sm .navbar-nav .nav-link{
-    color: #FEFBF6;
+    color: #E7CBCB;
 }
 
 .navbar-expand-sm .navbar-nav .nav-link:hover{
@@ -37,6 +42,18 @@ button a{
     background-color: #AEC2B6 ;
 }
 
+.search{
+    color: #E7CBCB;
+    border:1px solid #E7CBCB;
+    margin-left: 5px;
+}
+
+.card{
+    border:none;
+}
+
+
+
 table th{
     color:#fff;
     
@@ -49,4 +66,75 @@ table td a{
 
 table td a:hover{
     color:#111;
+}
+
+#available{
+    color:#29b15f
+}
+#not-available{
+    color:rgb(238, 64, 64)
+}
+.card h1{
+    color:#111;
+    font-size: 30px;
+}
+
+.card h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* setting size and zoom on product photo */
+.zoom-image {
+    width: 200px; /* Tamanho inicial da imagem */
+    height: 200px;
+    transition: transform 0.3s; /* Adiciona uma transição suave ao efeito de zoom */
+  }
+  
+  .zoom-image:hover {
+    transform: scale(1.2); /* Aplica o efeito de zoom na imagem quando o mouse estiver sobre ela */
+  }
+  
+  a.redirect{
+    text-decoration: none;
+    color: #000000;
+  }
+
+.card h5{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+} 
+
+.container-fluid{
+    /* border: 1px solid red; */
+    margin-top: 90px;
+    height: 50px;
+    
+
+}
+
+.supplements h1{
+    margin-top: 10px;
+    font-size:17px;
+    color:#363062;
+    /* border: 1px solid red; */
+}
+
+.supplements img{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  
+}
+.container-fluid.supplements{
+    background-color: #E7CBCB;
+   
+}
+
+.display-product{
+    margin-top:150px;
+}
+
+.detail-product{
+    margin-top:120px;
 }

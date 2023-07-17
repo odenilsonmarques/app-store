@@ -72,11 +72,19 @@
                                 <input type="file"  name="photo"  id="photo" class="form-control" >
                             </div>
                         </div>
-
+                        
                         <div class="row">
                             <div class="col-lg-12 mb-3">
                                 <label for="description" class="form-label">Descrição</label>
                                 <textarea name="description" id="description" cols="" rows="2" class="form-control"  >{{old('description')}}</textarea>
+                            </div>
+                        </div>
+                        
+
+                        <div class="row">
+                            <div class="col-lg-12 mb-3">
+                                <label for="feature" class="form-label">Características</label>
+                                <textarea name="feature" id="feature" cols="" rows="2" class="form-control">{{old('feature')}}</textarea>
                             </div>
                         </div>
 
