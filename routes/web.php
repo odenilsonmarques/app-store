@@ -7,6 +7,7 @@ use App\Http\Controllers\Product\ControllerProduct;
 use App\Http\Controllers\Home\ControllerHome;
 use App\Http\Controllers\Ordered\ControllerOrdered;
 use App\Http\Controllers\Site\ControllerSite;
+use App\Http\Controllers\Cart\ControllerCart;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,10 @@ Route::get('products/index',[ControllerProduct::class,'index'])->name('products.
 Route::get('products/{uuid}/detail',[ControllerProduct::class,'show'])->name('products.show');
 
 Route::get('ordereds/create',[ControllerOrdered::class,'create'])->name('ordereds.create');
+
+
+Route::post('carts/store',[ControllerCart::class,'store'])->name('carts.store');
+Route::get('carts/index',[ControllerCart::class,'index'])->name('carts.index');
 
 
 
