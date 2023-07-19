@@ -138,3 +138,10 @@ table td a:hover{
 .detail-product{
     margin-top:120px;
 }
+
+.product-cart{
+    margin-top: 150px;
+}
+.product-cart h1{
+    font-size:25px;
+}
