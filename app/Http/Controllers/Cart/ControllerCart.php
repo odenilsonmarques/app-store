@@ -8,69 +8,55 @@ use App\Models\Product;
 
 class ControllerCart extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
 
-     public function index()
-    {
-        $cart = session()->get('cart', []);
-        $productIds = array_keys($cart);
-        $products = Product::whereIn('id', $productIds)->get();
-
-        // dd($products);
-
-        return view('cart.index', compact('products'));
-    }
-    
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    // tenho esse método, mas a pagina que exibe os produto no carrinho contihua em barnco
-    public function store(Request $request)
-    {
+     // this method persist datas in cart
+     public function store(Request $request)
+     {
         $productId = $request->input('product_id');
         $prdQtd = $request->input('product_quantity');
 
         $cart = session()->get('cart', []);
 
-        if(isset($cart[$productId])){
-            $cart[$productId] += $prdQtd;
-        }else{
-            $cart[$productId] = $prdQtd;
+         if(isset($cart[$productId])){
+             $cart[$productId] += $prdQtd;
+         }else{
+             $cart[$productId] = $prdQtd;
+         }
+
+        session()->put('cart',$cart);
+        return redirect()->route('carts.index')->with('messageCreate', 'Produto adicionado ao carrinho com sucesso!');   
+     }
+    
+    // this method display datas in cart
+     public function index()
+    {
+        $cart = session()->get('cart', []);
+        $productId = array_keys($cart);
+        $products = Product::whereIn('id', $productId)->get();
+        
+        $valueTotalShopping = 0;
+        foreach ($cart as $productId => $prdQtd) {
+            $valuesProducts = Product::find($productId);
+            if ($valuesProducts) {
+                $valorTotalProduct = $valuesProducts->sale_price * $prdQtd;
+                $valueTotalShopping += $valorTotalProduct;
+            }
+        }
+        
+        return view('cart.index', compact('products','cart','valueTotalShopping','productId'));
+    }
+
+    // this method to remove cart product
+    public function destroy($productId)
+    {
+        $cart = session()->get('cart', []);
+
+        if (array_key_exists($productId, $cart)) {
+            unset($cart[$productId]);
+            session()->put('cart', $cart);
         }
 
-        // dd($cart);
-        session()->put('cart',$cart);
-       
-
-        return redirect()->back()->with('messageCreate', 'Produto adicionado ao carrinho com sucesso!');   
+        return redirect()->back()->with('messageCreate', 'Produto removido com sucesso');
     }
 
-   
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }

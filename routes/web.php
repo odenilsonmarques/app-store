@@ -35,9 +35,16 @@ Route::get('products/{uuid}/detail',[ControllerProduct::class,'show'])->name('pr
 
 Route::get('ordereds/create',[ControllerOrdered::class,'create'])->name('ordereds.create');
 
-
 Route::post('carts/store',[ControllerCart::class,'store'])->name('carts.store');
 Route::get('carts/index',[ControllerCart::class,'index'])->name('carts.index');
+
+// tenho essa rota para deletar
+Route::delete('carts/{productId}',[ControllerCart::class,'destroy'])->name('carts.destroy');
+
+// Route::put('carts/{productId}',[ControllerCart::class,'update'])->name('carts.update');
+
+// Route::put('/carts/{productId}', 'ControllerCart@update')->name('carts.update');
+
 
 
 
