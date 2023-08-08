@@ -10,11 +10,13 @@ use App\Http\Requests\UpdateStoreProduct;
 
 class ControllerProduct extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
+
         $products = Product::all();
         return view('product.index',compact('products'));
     }
