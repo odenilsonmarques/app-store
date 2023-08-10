@@ -8,6 +8,7 @@ use App\Models\Product;
 
 class ControllerSite extends Controller
 {
+   
     /**
      * Display a listing of the resource.
      */
