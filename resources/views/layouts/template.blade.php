@@ -34,20 +34,12 @@
                             <a class="nav-link" href="{{route('products.index')}}">Produto</a>
                         </li>
                         <li>
-                            <a href="{{ route('carts.index') }}">
-                                <i class="icon-carrinho"></i>
-                                Carrinho
-                                @if (session('cart_quantity') > 0)
-                                    <span class="badge">{{ session('cart_quantity') }}</span>
-                                @endif
-                            </a>
+                            @if (session('cart_quantity') > 0)
+                                <a  class="nav-link" href="{{ route('carts.index') }}">Carrinho<span>{{ session('cart_quantity')}}</span></a>
+                            @else
+                                <a  class="nav-link" href="{{ route('carts.index') }}">Carrinho</a>
+                            @endif
                         </li>
-                        <li class="nav-item">
-                            <form method="POST" action="{{route('logout')}}">
-                            @csrf
-                                <button type="submit" class="btn btn-outline-light sm">Sair</button>
-                            </form>
-                        </li> 
                     </ul>
                 </nav>
             </div>

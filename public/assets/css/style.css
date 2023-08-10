@@ -173,3 +173,12 @@ table td a:hover{
 .vuleuTotal {
     font-size: 22px;
 }
+
+a span{
+    background-color: red;
+    color: white; /* Cor do texto da quantidade */
+    border-radius: 50%; /* Formato redondo para o badge */
+    padding: 4px 6px; /* Espaçamento interno do badge */
+    font-size: 12px; /* Tamanho da fonte do badge */
+    margin-left: 3px;
+}
