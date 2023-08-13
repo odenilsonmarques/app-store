@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 </head>
 <body>
-    <header class="mb">
-        <nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background-color:#827397">
+    <header class="mb" style="border:1px solid red">
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="{{route('home')}}">
                     Run
@@ -26,7 +26,6 @@
 
                 <nav class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                     <ul class="navbar-nav">
-                      
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('categories.index')}}">Categoria</a>
                         </li>
@@ -45,24 +44,23 @@
             </div>
         </nav>
     </header>
-    <section>
-        <div class="container-fluid fixed-top supplements">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4 text-center">
-                        <h1><img src="{{asset('assets/img/academia1.png')}}">Creatina</h1>
-                    </div>
-                    <div class="col-sm-4 text-center">
-                        <h1><img src="{{asset('assets/img/mulher.png')}}">Whey protein</h1>
-                    </div>
-                    <div class="col-sm-4 text-center">
-                        <h1><img src="{{asset('assets/img/exercicio.png')}}">Hipercalórico</h1>
-                    </div>
-                </div>
-            </div>
+
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark two">
+        <div class="container">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Whey protein</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Creatina</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hipercalorico</a>
+                </li>
+            </ul>
         </div>
-    </section>
-    
+    </nav>
+
     <section>
         @yield('content')
     </section>
