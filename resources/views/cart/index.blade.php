@@ -3,13 +3,12 @@
 @section('title','Carrinho de compras')
 
 @section('content')
-
     <div class="container">
         <!--definindo o body para alterar a cor de fundo do mesmo somente nessa página-->
         <body class="page-carrinho">
             <div class="row ">
                 <div class="col-sm-8 shadow product-cart">
-                    <h1>Carrinho de compras</h1>
+                    <h1 class="mb-3">Carrinho de compras</h1>
     
                     @if(session('messageCreate'))
                         <div class="alert alert-success alert-dismissible msg fade show text-center form-quantity" role="alert">
@@ -17,7 +16,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     @endif
-                    <hr>
+                    
                     
                     @if(empty($cart))
                         <div class="alert alert-info">
@@ -62,7 +61,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><hr>
+                            </div>
                         @endforeach
                     @endif
                 </div>

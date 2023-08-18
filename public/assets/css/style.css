@@ -3,36 +3,54 @@ body{
 }
 
 .navbar{
-    height: 90px;
+    height: 80px;
+    background-color: #3CB371;
+    padding-top: 20px;
+}
+
+.navbar.two{
+    height: 40px;
+    background-color: #3CB371;
+    padding-top: 10px;
+    margin-top: 80px;
+    
 }
 
 .navbar a.navbar-brand {
-    color: #E7CBCB;
+    color: #fff;
     font-weight: bold;   
     font-size: 20px;
-   
 }
 
 .navbar-expand-sm .navbar-nav .nav-link{
-    color: #E7CBCB;
+    color: #fff;
 }
 
 .navbar-expand-sm .navbar-nav .nav-link:hover{
     text-decoration: underline;
 }
 
-
-button a{
-    text-decoration: none;
-    color: #fff;
+.input-group-append .btn {
+    background-color: white; 
+    color: #3CB371; 
+    border: 1px solid white; 
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Transição suave */
 }
 
-.btn-outline-secondary a{
-    color: #111;
+.input-group-append .btn:hover {
+    background-color:#3CB371;
+    color: white;
+    border: 1px solid white;
 }
+
+.display-product{
+    margin-top:120px;
+}
+
 
 .card-header{
     background-color: #AEC2B6;
+    /* margin-top: 20px; */
 }
 
 .suppliers{
@@ -48,9 +66,7 @@ button a{
     margin-left: 5px;
 }
 
-.card{
-    border:none;
-}
+
 
 
 
@@ -83,7 +99,6 @@ table td a:hover{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
 /* setting size and zoom on product photo */
 .zoom-image {
     width: 200px; /* Tamanho inicial da imagem */
@@ -109,40 +124,19 @@ table td a:hover{
     /* border: 1px solid red; */
     margin-top: 90px;
     height: 50px;
-    
-
 }
 
-.supplements h1{
-    margin-top: 10px;
-    font-size:17px;
-    color:#363062;
-    /* border: 1px solid red; */
-}
-
-.supplements img{
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
-  
-}
-.container-fluid.supplements{
-    background-color: #E7CBCB;
-   
-}
-
-.display-product{
-    margin-top:150px;
-}
-
-.product:hover{
-    transform: scale(1.1); 
-    /* box-shadow: 2px 2px 2px rgba(134, 128, 128, 0.3); */
-    /* background-color: #f0f5f2; */
+.product{
+    transition: border 0.3s ease-in-out;
 }
 
 .detail-product{
     margin-top:120px;
+}
+
+.card:hover{
+    /* border:none; */
+    border:1px solid #AEC2B6;
 }
 
 .product-cart{
@@ -158,7 +152,6 @@ table td a:hover{
 .form-quantity{
     /* border: 1px solid #000; */
     margin-right: 15px;
-
 }
 
 .card-body a{
@@ -176,9 +169,43 @@ table td a:hover{
 
 a span{
     background-color: red;
-    color: white; /* Cor do texto da quantidade */
-    border-radius: 50%; /* Formato redondo para o badge */
-    padding: 4px 6px; /* Espaçamento interno do badge */
-    font-size: 12px; /* Tamanho da fonte do badge */
+    color: white; 
+    border-radius: 50%;
+    padding: 4px 6px; 
+    font-size: 12px;
     margin-left: 3px;
+}
+
+.itens-list{
+    margin-top: 140px;
+}
+
+.new-item a{ 
+    text-decoration: none;
+    color: white;
+}
+
+.new-item:hover{
+    background-color: #3CB371;
+    border-color: #fff;
+}
+
+.new-register{
+    margin-top: 150px;
+}
+
+.cancel a{
+    color: #fff;
+}
+
+.btn-danger:hover{
+    
+    background-color: red;
+    border-color: #fff;
+}
+
+.btn-success:hover{
+    
+    background-color: green;
+    border-color: #fff;
 }

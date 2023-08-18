@@ -25,8 +25,8 @@
                                     <p id="not-available">Não disponível</p>
                                 @endif
                             </div>
-                            <h5><strong>Características:</strong>{{$products->feature}}</h5><hr>
-                            <h5><strong>Descrição:</strong>{{$products->description}}</h5>
+                            <h5><strong>Características</strong></h5><p>{{$products->feature}}</p>
+                            <h5><strong>Descrição</strong></h5><p>{{$products->description}}</p>
                         </div>
 
                         <!--form to insert cart product-->
