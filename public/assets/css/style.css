@@ -50,6 +50,7 @@ body{
 
 .card-header{
     background-color: #AEC2B6;
+    /* margin-top: 20px; */
 }
 
 .suppliers{
@@ -98,7 +99,6 @@ table td a:hover{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
 /* setting size and zoom on product photo */
 .zoom-image {
     width: 200px; /* Tamanho inicial da imagem */
@@ -124,22 +124,19 @@ table td a:hover{
     /* border: 1px solid red; */
     margin-top: 90px;
     height: 50px;
-    
-
 }
+
 .product{
-   
-        transition: border 0.3s ease-in-out;
-    
+    transition: border 0.3s ease-in-out;
 }
 
 .detail-product{
     margin-top:120px;
 }
+
 .card:hover{
     /* border:none; */
     border:1px solid #AEC2B6;
-
 }
 
 .product-cart{
@@ -155,7 +152,6 @@ table td a:hover{
 .form-quantity{
     /* border: 1px solid #000; */
     margin-right: 15px;
-
 }
 
 .card-body a{
@@ -173,9 +169,43 @@ table td a:hover{
 
 a span{
     background-color: red;
-    color: white; /* Cor do texto da quantidade */
-    border-radius: 50%; /* Formato redondo para o badge */
-    padding: 4px 6px; /* Espaçamento interno do badge */
-    font-size: 12px; /* Tamanho da fonte do badge */
+    color: white; 
+    border-radius: 50%;
+    padding: 4px 6px; 
+    font-size: 12px;
     margin-left: 3px;
+}
+
+.itens-list{
+    margin-top: 140px;
+}
+
+.new-item a{ 
+    text-decoration: none;
+    color: white;
+}
+
+.new-item:hover{
+    background-color: #3CB371;
+    border-color: #fff;
+}
+
+.new-register{
+    margin-top: 150px;
+}
+
+.cancel a{
+    color: #fff;
+}
+
+.btn-danger:hover{
+    
+    background-color: red;
+    border-color: #fff;
+}
+
+.btn-success:hover{
+    
+    background-color: green;
+    border-color: #fff;
 }

@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row mt-5">
+    <div class="row new-register">
         <div class="col-lg-12">
             @if($errors->any())
                 <div class="alert alert-danger mt-3">
@@ -15,7 +15,7 @@
                     </ul>
                 </div>
             @endif
-            <div class="card mt-5">
+            <div class="card form-register">
                 <div class="card-header">Cadastro de produto</div>
                 <div class="card-body">
                     <form action="{{route('products.store')}}" method="post" enctype="multipart/form-data">
@@ -90,7 +90,7 @@
 
                         <div class="row">
                             <div class="col-lg-12 mt-5">
-                                <button class="btn btn-danger"><a href="#">CANCELAR</a></button>
+                                <button class="btn btn-danger cancel"><a href="#">CANCELAR</a></button>
                                 <button type="submit" id="submitBtn" class="btn btn-success">CADASTRAR</button>
                             </div>
                         </div>

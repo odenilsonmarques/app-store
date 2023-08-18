@@ -55,7 +55,7 @@
                     <a class="nav-link" href="#">Creatina</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hipercalorico</a>
+                    <a class="nav-link" href="#">Hipercalórico</a>
                 </li>
             </ul>
         </div>
